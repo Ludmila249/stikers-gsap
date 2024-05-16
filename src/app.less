@@ -1,0 +1,50 @@
+@import './styles/helpers';
+
+.app {
+  width: 100vw;
+  overflow-x: hidden;
+
+  &__header {
+    position: fixed;
+    top: 40px;
+    left: calc((100vw - 96vw) / 2);
+    z-index: 999;
+
+    @media @tablet {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__faq {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 200px;
+
+    @media @tablet {
+      padding-top: 100px;
+      max-width: 90%;
+    }
+
+    h3 {
+      color: #353F47;
+      font-size: 72px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: -1.44px;
+      margin-bottom: 80px;
+
+      @media @tablet {
+        font-size: 62px;
+        margin-bottom: 40px;
+      }
+
+      @media @mobile {
+        font-size: 44px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

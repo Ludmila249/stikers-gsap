@@ -1,0 +1,59 @@
+.img(@name) {
+  background-image: url('../images/@{name}');
+}
+
+.cover() {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contain() {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ellipsis() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.square(@size) {
+  width: @size;
+  height: @size;
+}
+
+.no-scrollbar() {
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari and Opera
+  }
+}
+
+.hover(@params) {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @params();
+    }
+  }
+}
+
+.title() {
+  color: #353F47;
+  text-align: center;
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 100%;
+
+  @media @tablet {
+    font-size: 68px;
+  }
+
+  @media @mobile {
+    font-size: 38px;
+  }
+}
