@@ -37,7 +37,7 @@ export default new Vuex.Store({
     },
     hasSubscription(state) {
       return !!state.user.integrations?.items?.some(
-        (item) => item.service === 'yandex' && item.subscription
+        (item) => item.service === 'yandex' && item.subscription,
       );
     },
     currentYear(state) {
